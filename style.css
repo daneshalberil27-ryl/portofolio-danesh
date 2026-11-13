@@ -486,14 +486,16 @@ nav {
 
 /* Tombol tema */
 .theme-toggle {
-  background-color: var(--accent-color);
+  display: inline-block;
+  background-color: #2563eb;
   color: white;
   border: none;
   padding: 10px 16px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
-  transition: 0.3s;
+  visibility: visible;
+  opacity: 1;
 }
 
 .theme-toggle:hover {
@@ -503,4 +505,24 @@ nav {
 /* Transisi warna */
 a {
   transition: color 0.3s;
+}/* DARK MODE MOBILE FIX */
+
+.theme-toggle {
+  display: inline-block;
+  position: relative;
+  z-index: 1001;
+  pointer-events: auto;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    display: inline-block;
+    position: relative;
+    margin: 10px auto;
+    min-height: 44px;
+    font-size: 14px;
+    padding: 12px 18px;
+  }
 }
