@@ -441,3 +441,66 @@ nav a:hover {
         width: 190px;
     }
 }
+/* DARK MODE BLUE */
+
+:root {
+  color-scheme: light;
+  --bg-color: #f4f8ff;
+  --text-color: #172554;
+  --card-color: #ffffff;
+  --nav-color: #ffffff;
+  --accent-color: #2563eb;
+  --border-color: #dbeafe;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-color: #071426;
+  --text-color: #e2eaff;
+  --card-color: #10243d;
+  --nav-color: #0b1b30;
+  --accent-color: #60a5fa;
+  --border-color: #1e3a5f;
+}
+
+/* Warna utama website */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigasi */
+nav {
+  background-color: var(--nav-color);
+  color: var(--text-color);
+}
+
+/* Kartu proyek */
+.project-card,
+.card {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Tombol tema */
+.theme-toggle {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Transisi warna */
+a {
+  transition: color 0.3s;
+}
